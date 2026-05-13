@@ -1,4 +1,4 @@
-# BluetoothToggle
+# 蓝牙开关（BluetoothToggle）
 
 [English](#english) | [中文](#中文)
 
