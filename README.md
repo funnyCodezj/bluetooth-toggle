@@ -1,17 +1,20 @@
 # 蓝牙开关（BluetoothToggle）
 
-[English](#english) | [中文](#中文)
+[中文](#中文) | [English](#english)
+
+![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue)
+![Python](https://img.shields.io/badge/Python-3.10%2B-green)
+
+> 一键开启/关闭 Windows 蓝牙，无需管理员权限。
+> One-click Windows Bluetooth toggle — no admin privileges required.
 
 ---
 
 ## 中文
 
-Windows 蓝牙开关桌面工具 — 一键开启/关闭蓝牙，无需管理员权限。
+Windows 蓝牙开关桌面工具，无需管理员权限。
 
-![screenshot](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue)
-![Python](https://img.shields.io/badge/Python-3.10%2B-green)
-
-### 功能
+### 功能特性
 
 - 一键切换蓝牙开关
 - 实时显示蓝牙状态（开启/关闭）
@@ -29,7 +32,7 @@ Windows 蓝牙开关桌面工具 — 一键开启/关闭蓝牙，无需管理员
 
 ### 技术原理
 
-使用 `Windows.Devices.Radios` API（通过 [winsdk](https://github.com/pywinrt/python-winsdk) Python 绑定）直接控制蓝牙无线电状态，与 Windows 设置/Action Center 中的蓝牙开关等效。
+使用 `Windows.Devices.Radios` API（通过 [winsdk](https://github.com/pywinrt/python-winsdk) Python 绑定）直接控制蓝牙无线电状态，与 Windows 设置 / 操作中心中的蓝牙开关等效。
 
 - **Python 3.10+** — 运行时
 - **customtkinter** — 界面框架
@@ -52,7 +55,7 @@ pyinstaller --noconsole --onefile --name "BluetoothToggle" ^
 
 ## English
 
-A desktop tool to toggle Windows Bluetooth radio on/off — no admin privileges required.
+A desktop tool to toggle Windows Bluetooth radio on/off — no admin rights required.
 
 ### Features
 
@@ -72,7 +75,7 @@ A desktop tool to toggle Windows Bluetooth radio on/off — no admin privileges 
 
 ### How It Works
 
-Uses the `Windows.Devices.Radios` API (via [winsdk](https://github.com/pywinrt/python-winsdk) Python bindings) to control the Bluetooth radio state directly — identical to the Bluetooth toggle in Windows Settings / Action Center.
+Uses the `Windows.Devices.Radios` API (via [winsdk](https://github.com/pywinrt/python-winsdk) Python bindings) to control the Bluetooth radio state directly — identical to the toggle in Windows Settings / Action Center.
 
 - **Python 3.10+** — runtime
 - **customtkinter** — GUI framework
@@ -90,3 +93,9 @@ pyinstaller --noconsole --onefile --name "BluetoothToggle" ^
 ```
 
 Output at `dist/BluetoothToggle.exe`.
+
+---
+
+## License
+
+MIT
