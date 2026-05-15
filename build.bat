@@ -19,7 +19,9 @@ echo.
 echo 正在打包，请稍候...
 pyinstaller --noconsole --onefile ^
     --name "BluetoothToggle" ^
+    --icon "%~dp0logo.ico" ^
     --uac-admin ^
+    --add-data "logo.ico;." ^
     --add-data "%CTK_PATH%/assets;customtkinter/assets" ^
     --hidden-import "PIL._tkinter_finder" ^
     --noconfirm ^

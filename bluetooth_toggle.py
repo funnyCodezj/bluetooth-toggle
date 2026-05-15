@@ -3,6 +3,8 @@
 Uses Windows.Devices.Radios API (via winsdk) - no admin rights needed.
 """
 import asyncio
+import os
+import sys
 
 import customtkinter as ctk
 from winsdk.windows.devices.radios import (
@@ -100,11 +102,22 @@ class BluetoothToggleApp(ctk.CTk):
         self.geometry("380x220")
         self.resizable(False, False)
         self.after(100, self._center_window)
+        self._set_icon()
 
         self._build_ui()
         self.after(300, self.init_bluetooth)
 
     # ── window ──────────────────────────────────────────
+    def _set_icon(self):
+        try:
+            icon_path = os.path.join(
+                sys._MEIPASS if getattr(sys, "frozen", False) else os.path.dirname(__file__),
+                "logo.ico",
+            )
+            self.iconbitmap(icon_path)
+        except Exception:
+            pass
+
     def _center_window(self):
         self.update_idletasks()
         w, h = 380, 220
